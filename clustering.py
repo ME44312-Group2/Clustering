@@ -6,10 +6,14 @@ Modified on
 @author: twong, amartinez
 """
 
-# %% Code for changing json into pandas dataframe
-
+# %%
 import json
 import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import random 
+
+# %% Code for changing json into pandas dataframe
 
 # Load JSON data
 with open("Charging Data 2021.json", "r") as file:
@@ -27,4 +31,15 @@ if 'userInputs' in items_df.columns:
 
 # Display DataFrame
 print(items_df)
- # %%
+X = items_df
+
+ # %% Applying the K-means algorithm
+# Select the number of clusters #
+# Here we selected three to proceed. Normally you need to decide on it through some analysis.   
+k = 3
+
+# Initialize centroids - samples k many data points randomly as the initial centroids 
+centroids = X.sample(k, random_state=1)
+
+
+# %%
