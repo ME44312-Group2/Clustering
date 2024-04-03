@@ -6,7 +6,7 @@ Modified on
 @author: twong, amartinez
 """
 
-# %% Code 
+# %% Code for changing json into pandas dataframe
 
 import json
 import pandas as pd
