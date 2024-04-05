@@ -1,5 +1,5 @@
 #Code for Clusting & K-means analysis for EV Charging Data from 01-01-21 to 31-12-21
-#Progress: In progress
+#Progress: DONE
 
 """
 Created on
@@ -39,6 +39,9 @@ X = items_df
 #converting to date time format
 items_df['connectionTime'] = pd.to_datetime(items_df['connectionTime'])
 
+#filter for Month
+items_df = items_df[items_df['connectionTime'].dt.month == 12]
+
 # Extract day of the week from 'connectionTime'
 items_df['dayofweek'] = items_df['connectionTime'].dt.dayofweek
 
@@ -76,7 +79,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Perform KMeans clustering
-kmeans = KMeans(n_clusters=3, random_state=42)  # You can adjust the number of clusters as needed
+kmeans = KMeans(n_clusters=3, random_state=42)  
 kmeans.fit(X_scaled)
 
 # Add cluster labels to dataframe
@@ -119,7 +122,7 @@ ax.set_xticklabels(day_names)
 # Add labels and title
 ax.set_xlabel('Day of the Week')
 ax.set_ylabel('kWhDelivered')
-ax.set_title('Clusters of Charging Data')
+ax.set_title('Clusters of Charging Data (December)')
 plt.legend(title='Clusters', loc='upper right')
 
 # Display the plot

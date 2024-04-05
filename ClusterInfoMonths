@@ -1,0 +1,15 @@
+OVERALL
+Cluster centers:
+Cluster 0: (3.300659754948185, 8.218948140029301)
+Cluster 1: (8.066390041493777, 6.978687041247324)
+Cluster 2: (6.211091234347049, 35.87999727489565)
+Counts per cluster:
+cluster
+1    1687
+0    1061
+2     559
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 32.083459328696705
+Cluster 1: 51.013002721499845
+Cluster 2: 16.903537949803447

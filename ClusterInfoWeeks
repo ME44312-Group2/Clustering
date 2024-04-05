@@ -1,0 +1,193 @@
+WeeksByMonth
+
+JANUARY
+Cluster centers:
+Cluster 0: (1.0158730158730167, 7.892428571428572)
+Cluster 1: (4.454545454545455, 7.375415584415583)
+Cluster 2: (3.0, 32.242000000000004)
+Counts per cluster:
+cluster
+1    77
+0    63
+2    38
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 35.39325842696629
+Cluster 1: 43.258426966292134
+Cluster 2: 21.34831460674157
+
+FEBUARY
+Cluster centers:
+Cluster 0: (4.424657534246576, 6.445744427709858)
+Cluster 1: (3.5, 29.864333333333335)
+Cluster 2: (0.8648648648648642, 7.581878378378379)
+Counts per cluster:
+cluster
+2    74
+0    73
+1    36
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 39.89071038251366
+Cluster 1: 19.672131147540984
+Cluster 2: 40.43715846994536
+
+MARCH
+Cluster centers:
+Cluster 0: (0.9074074074074081, 6.968611111111109)
+Cluster 1: (4.310679611650487, 6.751776699029127)
+Cluster 2: (3.2857142857142856, 34.19709523809523)
+Counts per cluster:
+cluster
+0    108
+1    103
+2     42
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 42.68774703557312
+Cluster 1: 40.71146245059288
+Cluster 2: 16.600790513833992
+
+APRIL
+Cluster centers:
+Cluster 0: (4.882352941176473, 9.437594444590875)
+Cluster 1: (1.6987179487179482, 7.7462371794871805)
+Cluster 2: (2.8636363636363638, 40.391636363636366)
+Counts per cluster:
+cluster
+1    156
+0    102
+2     44
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 33.77483443708609
+Cluster 1: 51.65562913907284
+Cluster 2: 14.56953642384106
+
+MAY
+Cluster centers:
+Cluster 0: (3.545454545454545, 39.805418181818176)
+Cluster 1: (4.390410958904108, 9.354506849315067)
+Cluster 2: (0.9791666666666681, 8.686847222222223)
+Counts per cluster:
+cluster
+1    146
+2    144
+0     55
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 15.942028985507244
+Cluster 1: 42.31884057971014
+Cluster 2: 41.73913043478261
+
+JUNE
+Cluster centers:
+Cluster 0: (3.0921052631578947, 36.90688157894737)
+Cluster 1: (1.0489130434782594, 7.51946195652174)
+Cluster 2: (4.269662921348314, 8.825140449438202)
+Counts per cluster:
+cluster
+1    184
+2    178
+0     76
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 17.35159817351598
+Cluster 1: 42.00913242009132
+Cluster 2: 40.63926940639269
+
+JULY
+Cluster centers:
+Cluster 0: (1.1169590643274876, 5.922421052631578)
+Cluster 1: (4.054545454545454, 7.225000000000001)
+Cluster 2: (2.7818181818181817, 38.28047272727272)
+Counts per cluster:
+cluster
+1    220
+0    171
+2     55
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 38.34080717488789
+Cluster 1: 49.327354260089685
+Cluster 2: 12.331838565022421
+
+AUGUST
+Cluster centers:
+Cluster 0: (4.218340611353712, 7.218178049334021)
+Cluster 1: (3.0347826086956524, 36.35495197101449)
+Cluster 2: (1.0117187500000007, 6.7556828982204875)
+Counts per cluster:
+cluster
+2    256
+0    229
+1    115
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 38.166666666666664
+Cluster 1: 19.166666666666668
+Cluster 2: 42.66666666666667
+
+SEPTEMBER
+Cluster centers:
+Cluster 0: (1.1428571428571426, 7.301241071428571)
+Cluster 1: (3.25, 40.89595)
+Cluster 2: (4.0567375886524815, 7.286460992907798)
+Counts per cluster:
+cluster
+2    141
+0    112
+1     40
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 38.225255972696246
+Cluster 1: 13.651877133105803
+Cluster 2: 48.122866894197955
+
+NOVEMBER
+Cluster centers:
+Cluster 0: (4.555555555555555, 6.829055555555556)
+Cluster 1: (0.9615384615384617, 5.766615384615385)
+Cluster 2: (2.285714285714286, 28.55428571428571)
+Counts per cluster:
+cluster
+0    36
+1    26
+2     7
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 52.17391304347826
+Cluster 1: 37.68115942028986
+Cluster 2: 10.144927536231885
+
+DECEMBER
+Cluster centers:
+Cluster 0: (4.985915492957746, 9.424893853803859)
+Cluster 1: (1.183673469387755, 7.673418160430837)
+Cluster 2: (2.7419354838709675, 31.825806451612905)
+Counts per cluster:
+cluster
+1    98
+0    71
+2    31
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 35.5
+Cluster 1: 49.0
+Cluster 2: 15.5
+
+OVERALL
+Cluster centers:
+Cluster 0: (3.0667870036101084, 36.10742324308063)
+Cluster 1: (4.294283697953423, 7.745228802744286)
+Cluster 2: (1.0359281437125771, 7.164495360528941)
+Counts per cluster:
+cluster
+1    1419
+2    1336
+0     552
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 16.69186573934079
+Cluster 1: 42.90898094950106
+Cluster 2: 40.399153311158145
