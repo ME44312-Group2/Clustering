@@ -1,0 +1,210 @@
+## Overall 
+
+Cluster centers:
+Cluster 0: (14.006, 36.99794495333333)
+Cluster 1: (18.356151268549546, 6.680378559991379)
+Cluster 2: (1.9958217270194982, 11.275744015784587)
+Counts per cluster:
+cluster
+1    2090
+2     716
+0     501
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 15.149682491684304
+Cluster 1: 63.199274266706986
+Cluster 2: 21.651043241608708
+
+## January 2021 
+
+Cluster centers:
+Cluster 0: (19.747252747252748, 6.878813186813185)
+Cluster 1: (1.9038461538461569, 9.674557692307692)
+Cluster 2: (13.657142857142857, 33.179342857142856)
+Counts per cluster:
+cluster
+0    91
+1    52
+2    35
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 51.12359550561798
+Cluster 1: 29.213483146067414
+Cluster 2: 19.662921348314608
+
+## Feb 2021 
+
+Cluster centers:
+Cluster 0: (1.9999999999999982, 9.67426329248366)
+Cluster 1: (19.309734513274336, 6.276614082109515)
+Cluster 2: (12.305555555555555, 29.681444444444438)
+Counts per cluster:
+cluster
+1    113
+2     36
+0     34
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 18.579234972677597
+Cluster 1: 61.74863387978142
+Cluster 2: 19.672131147540984
+
+## March 2021
+
+Cluster centers:
+Cluster 0: (19.11392405063291, 6.278177215189873)
+Cluster 1: (2.1999999999999993, 9.68398181818182)
+Cluster 2: (15.775, 33.993750000000006)
+Counts per cluster:
+cluster
+0    158
+1     55
+2     40
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 62.450592885375485
+Cluster 1: 21.73913043478261
+Cluster 2: 15.810276679841898
+
+## April 2021
+
+Cluster centers:
+Cluster 0: (12.526315789473685, 42.396736842105256)
+Cluster 1: (18.75, 7.520915020908012)
+Cluster 2: (2.0625000000000018, 13.015947330729167)
+Counts per cluster:
+cluster
+1    200
+2     64
+0     38
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 12.582781456953644
+Cluster 1: 66.22516556291392
+Cluster 2: 21.192052980132452
+
+## May 2021 
+
+Cluster centers:
+Cluster 0: (12.25, 41.79118749999999)
+Cluster 1: (1.826666666666668, 12.414173333333332)
+Cluster 2: (18.72072072072072, 8.418567567567568)
+Counts per cluster:
+cluster
+2    222
+1     75
+0     48
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 13.91304347826087
+Cluster 1: 21.73913043478261
+Cluster 2: 64.34782608695652
+
+## June 2021 
+
+Cluster centers:
+Cluster 0: (13.759493670886076, 36.00407594936709)
+Cluster 1: (18.08812260536398, 6.667287356321838)
+Cluster 2: (2.2448979591836746, 11.988724489795917)
+Counts per cluster:
+cluster
+1    261
+2     98
+0     79
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 18.036529680365295
+Cluster 1: 59.589041095890416
+Cluster 2: 22.37442922374429
+
+## July 2021 
+
+Cluster centers:
+Cluster 0: (18.10691823899371, 5.976490566037736)
+Cluster 1: (12.0, 36.87153333333334)
+Cluster 2: (1.8823529411764746, 8.747705882352943)
+Counts per cluster:
+cluster
+0    318
+2     68
+1     60
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 71.30044843049326
+Cluster 1: 13.452914798206278
+Cluster 2: 15.246636771300448
+
+## August 2021 
+
+Cluster centers:
+Cluster 0: (17.542005420054203, 6.007717060276247)
+Cluster 1: (2.175572519083971, 12.419396946564886)
+Cluster 2: (15.23, 37.19448476666666)
+Counts per cluster:
+cluster
+0    369
+1    131
+2    100
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 61.5
+Cluster 1: 21.833333333333332
+Cluster 2: 16.666666666666664
+
+
+## September 2021 
+
+Cluster centers:
+Cluster 0: (17.44497607655503, 7.078488038277509)
+Cluster 1: (16.485714285714288, 42.01888571428571)
+Cluster 2: (1.7142857142857135, 10.834755102040816)
+Counts per cluster:
+cluster
+0    209
+2     49
+1     35
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 71.33105802047781
+Cluster 1: 11.945392491467576
+Cluster 2: 16.723549488054605
+
+## October 2020
+
+Nothing 
+
+## November 2020 
+
+Cluster centers:
+Cluster 0: (1.6666666666666679, 29.816499999999998)
+Cluster 1: (19.711111111111112, 5.652866666666668)
+Cluster 2: (2.0000000000000018, 9.02111111111111)
+Counts per cluster:
+cluster
+1    45
+2    18
+0     6
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 8.695652173913043
+Cluster 1: 65.21739130434783
+Cluster 2: 26.08695652173913
+
+## December 2020 
+
+Cluster centers:
+Cluster 0: (1.8125000000000036, 10.176181597222222)
+Cluster 1: (19.156862745098042, 6.962968834510531)
+Cluster 2: (14.088235294117647, 30.772470588235297)
+Counts per cluster:
+cluster
+1    102
+0     64
+2     34
+Name: count, dtype: int64
+Percentage of data assigned to each cluster:
+Cluster 0: 32.0
+Cluster 1: 51.0
+Cluster 2: 17.0
+
+

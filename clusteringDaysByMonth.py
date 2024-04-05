@@ -1,5 +1,5 @@
 #Code for Clusting & K-means analysis for EV Charging Data from 01-01-21 to 31-12-21
-#PROGRESS: not started
+#PROGRESS: Done
 
 """
 Created on
@@ -32,6 +32,10 @@ visual_df = pd.json_normalize(data['_items'])
 print(items_df)
 X = items_df
 
+target_month = 12
+title = "Clusters of Charging Data Per Hour in December 2020"
+
+
 
 # %% Elbow Method to determine how many clusters
 
@@ -39,10 +43,10 @@ X = items_df
 items_df['connectionTime'] = pd.to_datetime(items_df['connectionTime'])
 
 # Extract month from 'connectionTime'
-items_df['month'] = items_df['connectionTime'].dt.month
-
+items_df['hour'] = items_df['connectionTime'].dt.hour
+items_df = items_df[(items_df['connectionTime'].dt.month == target_month)]
 # Select features for clustering
-X = items_df[['kWhDelivered', 'month']]
+X = items_df[['kWhDelivered', 'hour']]
 
 # Standardize the features
 scaler = StandardScaler()
@@ -50,14 +54,14 @@ X_scaled = scaler.fit_transform(X)
 
 # Calculate WCSS for different values of k
 wcss = []
-max_clusters = 10  # Maximum number of clusters to try
+max_clusters = 24  # Maximum number of clusters to try
 for i in range(1, max_clusters + 1):
     kmeans = KMeans(n_clusters=i, random_state=42)
     kmeans.fit(X_scaled)
     wcss.append(kmeans.inertia_)
 
 # Plot the elbow curve
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(24, 6))
 plt.plot(range(1, max_clusters + 1), wcss, marker='o', linestyle='--')
 plt.xlabel('Number of Clusters')
 plt.ylabel('Within-Cluster Sum of Squares (WCSS)')
@@ -68,7 +72,7 @@ plt.show()
  # %% Applying the K-means algorithm
 
 # Select features for clustering
-X = items_df[['kWhDelivered', 'month']]
+X = items_df[['kWhDelivered', 'hour']]
 
 # Standardize the features
 scaler = StandardScaler()
@@ -108,15 +112,16 @@ fig, ax = plt.subplots(figsize=(10, 6))
 # Plot each cluster separately
 for cluster_label in items_df['cluster'].unique():
     cluster_data = items_df[items_df['cluster'] == cluster_label]
-    ax.scatter(cluster_data['month'], cluster_data['kWhDelivered'], label=f'Cluster {cluster_label}')
+    ax.scatter(cluster_data['hour'], cluster_data['kWhDelivered'], label=f'Cluster {cluster_label}')
 
 # Add labels and title
-ax.set_xlabel('Month')
+ax.set_xlabel('Hour')
 ax.set_ylabel('kWhDelivered')
-ax.set_title('Clusters of Charging Data')
+ax.set_title(title)
 plt.legend(title='Clusters', loc='upper right')
 
 # Display the plot
 plt.show()
+
 
 # %%
