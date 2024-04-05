@@ -119,29 +119,3 @@ plt.legend(title='Clusters', loc='upper right')
 # Display the plot
 plt.show()
 
-# %%
-# Making a plot to check how many charges we have per month
-visual_df['connectionTime'] = pd.to_datetime(visual_df['connectionTime'])
-
-# Extracting month from 'connectionTime' and converting numeric month to month names
-visual_df['month_name'] = visual_df['connectionTime'].dt.month_name()
-
-# Counting the number of data points for each month
-monthly_counts = visual_df['month_name'].value_counts().sort_index()
-
-# Reindexing to ensure months are in order
-months_in_order = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-]
-monthly_counts = monthly_counts.reindex(months_in_order, fill_value=0)
-
-# Plotting the data
-plt.figure(figsize=(10, 6))
-monthly_counts.plot(kind='bar', color='skyblue')
-plt.title('Number of Data Points for Each Month')
-plt.xlabel('Month')
-plt.ylabel('Number of Data Points')
-plt.xticks(rotation=45)  # Rotate x-axis labels for better visibility
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.show()

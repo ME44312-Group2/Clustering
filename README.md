@@ -20,13 +20,13 @@ We can use python to visualize our own data. We can see how many charges we have
 
     -Throughout different months (DONE)
     x-axis = 9 points for each month in dataset
-        -Overall = using all data from Jan-Sep
+        -Overall = using all data from Oct 2020 - Sep 2021
 
     -Throughout different times in the day  
     x-axis = 24 points for each hour of the day
         -Overall = using all data from Jan-Sep (1 graph)
-        -Monthly = month-by-month analysis (9 graphs)
+        -Monthly = month-by-month analysis (12 graphs)
         
     -Throughout the week (overall and monthly breakdown) x-axis = 7 points for each day of the week
         -Overall = using all data from Jan-Sep (1 graph)
-        -Monthly = month-by-month analysis (9 graphs)
+        -Monthly = month-by-month analysis (12 graphs)

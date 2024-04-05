@@ -1,5 +1,5 @@
 #Code for Clusting & K-means analysis for EV Charging Data from 01-01-21 to 31-12-21
-#Progress: Not started
+#Progress: Done
 
 """
 Created on
@@ -17,11 +17,12 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import datetime
 import matplotlib.pyplot as plt
+import calendar
 
 # %% Code for changing json into pandas dataframe
 
 # Load JSON data
-with open("Charging Data 2021.json", "r") as file:
+with open("Charging Data Oct 2020 - Sep 2021.json", "r") as file:
     data = json.load(file)
 
 # Normalize the '_items' list
@@ -38,11 +39,11 @@ X = items_df
 #converting to date time format
 items_df['connectionTime'] = pd.to_datetime(items_df['connectionTime'])
 
-# Extract month from 'connectionTime'
-items_df['month'] = items_df['connectionTime'].dt.month
+# Extract day of the week from 'connectionTime'
+items_df['dayofweek'] = items_df['connectionTime'].dt.dayofweek
 
 # Select features for clustering
-X = items_df[['kWhDelivered', 'month']]
+X = items_df[['kWhDelivered', 'dayofweek']]
 
 # Standardize the features
 scaler = StandardScaler()
@@ -68,7 +69,7 @@ plt.show()
  # %% Applying the K-means algorithm
 
 # Select features for clustering
-X = items_df[['kWhDelivered', 'month']]
+X = items_df[['kWhDelivered', 'dayofweek']]
 
 # Standardize the features
 scaler = StandardScaler()
@@ -101,17 +102,22 @@ print("Cluster 0:", cluster0)
 print("Cluster 1:", cluster1)
 print("Cluster 2:", cluster2)
 
-# Scatter plot of kwhDelivered vs month, colored by cluster
+# Scatter plot of kwhDelivered vs dayofweek, colored by cluster
 # Set up the figure and axis
 fig, ax = plt.subplots(figsize=(10, 6))
 
 # Plot each cluster separately
 for cluster_label in items_df['cluster'].unique():
     cluster_data = items_df[items_df['cluster'] == cluster_label]
-    ax.scatter(cluster_data['month'], cluster_data['kWhDelivered'], label=f'Cluster {cluster_label}')
+    ax.scatter(cluster_data['dayofweek'], cluster_data['kWhDelivered'], label=f'Cluster {cluster_label}')
+
+#Day of week
+day_names = [calendar.day_name[i] for i in range(7)]
+ax.set_xticks(range(7))
+ax.set_xticklabels(day_names)
 
 # Add labels and title
-ax.set_xlabel('Month')
+ax.set_xlabel('Day of the Week')
 ax.set_ylabel('kWhDelivered')
 ax.set_title('Clusters of Charging Data')
 plt.legend(title='Clusters', loc='upper right')
@@ -120,28 +126,3 @@ plt.legend(title='Clusters', loc='upper right')
 plt.show()
 
 # %%
-# Making a plot to check how many charges we have per month
-visual_df['connectionTime'] = pd.to_datetime(visual_df['connectionTime'])
-
-# Extracting month from 'connectionTime' and converting numeric month to month names
-visual_df['month_name'] = visual_df['connectionTime'].dt.month_name()
-
-# Counting the number of data points for each month
-monthly_counts = visual_df['month_name'].value_counts().sort_index()
-
-# Reindexing to ensure months are in order
-months_in_order = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
-]
-monthly_counts = monthly_counts.reindex(months_in_order, fill_value=0)
-
-# Plotting the data
-plt.figure(figsize=(10, 6))
-monthly_counts.plot(kind='bar', color='skyblue')
-plt.title('Number of Data Points for Each Month')
-plt.xlabel('Month')
-plt.ylabel('Number of Data Points')
-plt.xticks(rotation=45)  # Rotate x-axis labels for better visibility
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.show()
