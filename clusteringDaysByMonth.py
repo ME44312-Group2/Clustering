@@ -79,7 +79,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Perform KMeans clustering
-kmeans = KMeans(n_clusters=3, random_state=42)  # You can adjust the number of clusters as needed
+kmeans = KMeans(n_clusters=3, random_state=42)  
 kmeans.fit(X_scaled)
 
 # Add cluster labels to dataframe
@@ -87,6 +87,7 @@ items_df['cluster'] = kmeans.labels_
 
 # Display the cluster centers
 print("Cluster centers:")
+print("cluster x: (month, kWh)")
 for i, center in enumerate(scaler.inverse_transform(kmeans.cluster_centers_)):
     print(f"Cluster {i}: ({center[1]}, {center[0]})")
 

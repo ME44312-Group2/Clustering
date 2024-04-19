@@ -82,7 +82,7 @@ kmeans.fit(X_scaled)
 items_df['cluster'] = kmeans.labels_
 
 # Display the cluster centers
-print("Cluster centers:")
+print("Cluster centers (x=month,y=kWhDelivered):")
 for i, center in enumerate(scaler.inverse_transform(kmeans.cluster_centers_)):
     print(f"Cluster {i}: ({center[1]}, {center[0]})")
 
@@ -119,3 +119,5 @@ plt.legend(title='Clusters', loc='upper right')
 # Display the plot
 plt.show()
 
+
+# %%

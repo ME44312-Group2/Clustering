@@ -44,17 +44,19 @@ monthly_counts = visual_df['month_name'].value_counts().sort_index()
 
 # Reindexing to ensure months are in order
 months_in_order = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September'
 ]
 monthly_counts = monthly_counts.reindex(months_in_order, fill_value=0)
 
 # Plotting the data
 plt.figure(figsize=(10, 6))
 monthly_counts.plot(kind='bar', color='skyblue')
-plt.title('Number of Data Points for Each Month')
+plt.title('Number of Data Points for Each Month from October 2020 - September 2021')
 plt.xlabel('Month')
 plt.ylabel('Number of Data Points')
 plt.xticks(rotation=45)  # Rotate x-axis labels for better visibility
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
+
+#%%
