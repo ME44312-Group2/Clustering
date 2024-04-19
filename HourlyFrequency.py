@@ -42,6 +42,8 @@ visual_df['hour'] = visual_df['connectionTime'].dt.hour
 # Counting the number of data points for each month
 monthly_counts = visual_df['hour'].value_counts().sort_index()
 
+print(monthly_counts)
+
 # Plotting the data
 plt.figure(figsize=(10, 6))
 monthly_counts.plot(kind='bar', color='skyblue')

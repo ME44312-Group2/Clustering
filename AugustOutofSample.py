@@ -1,4 +1,4 @@
-#Code for Clusting & K-means analysis for EV Charging Data from 01-01-21 to 31-12-21
+#Code for Clusting & K-means analysis for EV Charging Data comparing Aug 2021 
 #PROGRESS: Done
 
 """
@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 # %% Code for changing json into pandas dataframe
 
 # Load JSON data
-with open("Charging Data Oct 2020 - Sep 2021.json", "r") as file:
+with open("Aug2021OutOfSample_JPL.json", "r") as file:
     data = json.load(file)
 
 # Normalize the '_items' list
@@ -33,7 +33,7 @@ print(items_df)
 X = items_df
 
 target_month = 8
-title = "Clusters of Charging Data Per Hour in August 2021"
+title = "Clusters of Charging Data Per Hour in August 2021 Out of Sample"
 
 
 
@@ -87,7 +87,7 @@ items_df['cluster'] = kmeans.labels_
 
 # Display the cluster centers
 print("Cluster centers:")
-print("cluster x: (month, kWh)")
+print("cluster x: (Hour, kWh)")
 for i, center in enumerate(scaler.inverse_transform(kmeans.cluster_centers_)):
     print(f"Cluster {i}: ({center[1]}, {center[0]})")
 
@@ -123,6 +123,6 @@ plt.legend(title='Clusters', loc='upper right')
 
 # Display the plot
 plt.show()
-
+print(kmeans)
 
 # %%
